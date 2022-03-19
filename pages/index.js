@@ -5,10 +5,10 @@ import { client } from "./_app";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { Fragment } from "react";
 
-import LaunchesList from '../components/launches/LaunchesList';
+import LaunchesList from './LaunchesList';
 
 export default function Home() {
-  
+  //console.log('launches', launches);
   return (
     <Fragment>
     <div className={styles.container}>
@@ -23,3 +23,36 @@ export default function Home() {
   );
 }
 
+// export async function getStaticProps() {
+
+//   const { data } = await client.query({
+//     query: gql`
+//       query GetLaunches {
+//         launchesPast(limit:10) {
+//           id
+//           mission_name
+//           launch_date_local
+//           launch_site {
+//             site_name_long
+//           }
+//           details
+//           links {
+//             article_link
+//             video_link
+//             mission_patch
+//             wikipedia
+//           }
+//           rocket {
+//             rocket_name
+//           }
+//         }
+//       }
+//     `,
+//   });
+
+//   return {
+//     props: {
+//       launches: data.launchesPast,
+//     },
+//   };
+// }

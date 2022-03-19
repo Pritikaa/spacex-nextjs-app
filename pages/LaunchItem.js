@@ -1,8 +1,7 @@
-import Card from '../ui/Card';
+import Card from '../components/ui/Card';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 
-import classes from './MeetupItem.module.css';
+import classes from '../components/launches/MeetupItem.module.css';
 
 function LaunchItem(props) {
 
